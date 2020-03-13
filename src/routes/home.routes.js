@@ -1,8 +1,11 @@
 import React from 'react';
+import { Image } from 'react-native';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
+import home from '../images/home.png';
+import content from '../images/content.png';
 
 import Home from '../pages/Home';
 import Content from '../pages/Content';
@@ -23,7 +26,7 @@ export default function HomeRoutes() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ focused }) => (
-            <Icon name="home" size={25} color={focused ? '#fff' : '#ddd'} />
+            <Image source={home} color={focused ? '#fff' : '#ddd'} />
           ),
         }}
       />
@@ -33,7 +36,7 @@ export default function HomeRoutes() {
         options={{
           tabBarLabel: 'Content',
           tabBarIcon: ({ focused }) => (
-            <Icon name="content-paste" size={25} color={focused ? '#fff' : '#ddd'} />
+            <Image source={content} color={focused ? '#fff' : '#ddd'} />
           ),
         tabBarOptions: { showLabel: false }
         }}
