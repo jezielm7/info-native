@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { ScrollView, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
 
 import {
   Container,
@@ -14,6 +14,7 @@ import List from '../../components/List/list';
 export default function Content({ navigation }) {
   return (
     <Container>
+      <StatusBar backgroundColor="#7159c1" />
       <ScrollView showsVerticalScrollIndicator={false} >
 
         <List />

@@ -13,15 +13,17 @@ const Stack = createStackNavigator();
 
 export default function Routes() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerStyle: { backgroundColor: '#7159c1' },
-      headerTintColor: '#FFF',
-      headerTitleAlign: 'center',
+    <Stack.Navigator
+      initialRouteName="Login"
+      screenOptions={{
+        headerStyle: { backgroundColor: '#7159c1' },
+        headerTintColor: '#FFF',
+        headerTitleAlign: 'center',
       }}
     >
-      <Stack.Screen name="Home" component={HomeRoutes} options={{ title: 'Master Learn' }} />
+      <Stack.Screen name="Home" component={HomeRoutes} options={{ title: 'Master Learning' }} />
       <Stack.Screen name="Content" component={Content} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

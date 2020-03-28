@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ScrollView, StyleSheet, TouchableOpacity, } from 'react-native';
+import { Button, ScrollView, StyleSheet, TouchableOpacity, StatusBar, } from 'react-native';
 import Lottie from 'lottie-react-native';
 
 import rocket from '../../components/json-animated/rocket-flying.json';
@@ -20,6 +20,7 @@ export default function Home({ navigation }) {
 
   return (
     <Container>
+      <StatusBar backgroundColor="#7159c1" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <Title>Welcome to the Rocket!</Title>
         <TextTitle>Are you ready?</TextTitle>
