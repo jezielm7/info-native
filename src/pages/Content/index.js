@@ -25,7 +25,7 @@ export default function Content({ navigation }) {
 
           <TouchableOpacity
             style={styles.logButton}
-            onPress={() => navigation.navigate('Login')}
+            onPress={() => navigation.navigate('SignIn')}
           >
             <NavTxtButton>Go to Login</NavTxtButton>
           </TouchableOpacity>

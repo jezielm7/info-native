@@ -3,9 +3,8 @@ import { Image } from 'react-native';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-// import Icon from 'react-native-vector-icons/MaterialIcons';
-import home from '../images/home.png';
-import content from '../images/content.png';
+import HomeIcon from 'react-native-vector-icons/AntDesign';
+import ContentIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Home from '../pages/Home';
 import Content from '../pages/Content';
@@ -26,7 +25,7 @@ export default function HomeRoutes() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ focused }) => (
-            <Image source={home} color={focused ? '#fff' : '#ddd'} />
+            <HomeIcon name="home" size={22} color={focused ? '#fff' : '#ddd'} />
           ),
         }}
       />
@@ -36,7 +35,7 @@ export default function HomeRoutes() {
         options={{
           tabBarLabel: 'Content',
           tabBarIcon: ({ focused }) => (
-            <Image source={content} color={focused ? '#fff' : '#ddd'} />
+            <ContentIcon name="table-of-contents" size={22} color={focused ? '#fff' : '#ddd'} />
           ),
         tabBarOptions: { showLabel: false }
         }}
